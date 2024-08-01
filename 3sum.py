@@ -35,4 +35,5 @@ def nums_3_sum(nums):
 
     return solutions
 
-print(nums_3_sum([-1,0,1,2,-1,-4]))
+
+print(nums_3_sum([-1, 0, 1, 2, -1, -4]))

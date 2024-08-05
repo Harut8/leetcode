@@ -15,4 +15,5 @@ def trapping_rain_water(heights):
             rgt -= 1
     return result
 
-print(trapping_rain_water([0,1,0,2,1,0,1,3,2,1,2,1]))
+
+print(trapping_rain_water([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))

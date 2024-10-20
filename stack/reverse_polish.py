@@ -17,5 +17,11 @@ def x(tokens):
             s.append(int(token))
     return s[0]
 
+"""
+POLISH NOTATION Y ASUM E
+AMEN QAYLOV STUGIR ARDYOQ AYN OPERATOR E TE TIV YST DRA KATARIR
+1) ETE OPERATOR E VERCRA VERJIN 2 ELEMENTY(JNJELOV) U KATARIR GORCOXUTYUNY
+2) ETE TIV E UXXAKI AVELACRA
+"""
 
 print(x(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]))

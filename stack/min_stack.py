@@ -22,9 +22,10 @@ class MinStack(object):
     def getMin(self):
         return self.min_stack[-1]
 
-# Your MinStack object will be instantiated and called as such:
-# obj = MinStack()
-# obj.push(val)
-# obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.getMin()
+"""
+AMEN PUSH I JMNK MENQ
+STUGUM ENQ ARDYOQ AYD ELEMENTY MECAGUYNN E TE VOCH
+AYSINQN PUSH ANELUC ARAJ ETE MIN_STACK UM KA ELEMENT
+VERCNUM ENQ EV STUGUM ARDYOQ POQR E TE MEC EV AVELACNUM ENQ ETE KARIQY KA
+HAKARAK DEPQUM CHENQ ANUM
+"""

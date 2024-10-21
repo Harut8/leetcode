@@ -1,18 +1,18 @@
 # https://leetcode.com/problems/combination-sum-iii/submissions/
 
-def combinationSum3(k, n):
-    res = []
-    def backtrack(summ, current_sub, start):
-        if len(current_sub) == k and summ == n:
-            res.append(current_sub.copy())
-            return
-        if summ > n or len(current_sub) == k:
-            return
-        for i in range(start, 10):
-            current_sub.append(i)
-            backtrack(summ + i, current_sub, i + 1)
-            current_sub.pop()
-    backtrack(0, [], 1)
+res = []
+k = 3
+n = 7
+def backtrack(curr, start, rem):
+    if len(curr) == k and rem == 0:
+        res.append(curr[:])
+    if len(curr) > k or rem < 0:
+        return
+    for i in range(start, 10):
+        curr.append(i)
+        backtrack(curr, i + 1, rem - i)
+        curr.pop()
+    backtrack([],1, n)
     return res
 """
 KRKIN OGTVUM ENQ BACKTRACK IC EV COMBINATIONNERI GAXAPRIC

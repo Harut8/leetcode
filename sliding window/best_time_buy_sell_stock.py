@@ -9,7 +9,9 @@ def buy_sell_stock(prices):
             left = right
         right += 1
     return profit
+
 prices = [7,1,5,3,6,4]
+
 
 print(buy_sell_stock(prices))
 """

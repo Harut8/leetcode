@@ -2,18 +2,32 @@
 from collections import defaultdict
 
 
+# def longest_repeating_char(s, k):
+#     left = 0
+#     char_freq = defaultdict(int)
+#     max_freq = max_len = 0
+#     for right in range(len(s)):
+#         char_freq[s[right]] += 1
+#         window_size = right - left + 1
+#         max_freq = max(max_freq, char_freq[s[right]])
+#         while window_size - max_freq > k:
+#             left += 1
+#             char_freq[s[left]] -= 1
+#         max_len = max(max_len, right - left + 1)
+#     return max_len
+
 def longest_repeating_char(s, k):
-    left = 0
-    char_freq = defaultdict(int)
-    max_freq = max_len = 0
-    for right in range(len(s)):
-        char_freq[s[right]] += 1
-        window_size = right - left + 1
-        max_freq = max(max_freq, char_freq[s[right]])
-        while window_size - max_freq > k:
-            left += 1
-            char_freq[s[left]] -= 1
-        max_len = max(max_len, right - left + 1)
+    max_len = 0
+    window_char_freq = defaultdict(int)
+    max_freq = 0
+    l = 0
+    for r in range(len(s)):
+        window_char_freq[s[r]] += 1
+        max_freq = max(max_freq, window_char_freq[s[r]])
+        if r - l + 1 - max_freq > k:
+            window_char_freq[s[l]] -= 1
+            l += 1
+        max_len = max(max_len, r - l + 1)
     return max_len
 
 s = "ABAB"

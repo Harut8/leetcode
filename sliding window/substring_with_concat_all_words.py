@@ -20,6 +20,7 @@ def findSubstring(s: str, words: list[str]) -> list[int]:
     return res
 
 
+
 s = "barfoothefoobarman"
 words = ["foo", "bar"]
 print(findSubstring(s, words))

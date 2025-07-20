@@ -23,3 +23,9 @@ def via_heap(_nums):
         _counter[_num] = _counter.get(_num, 0) + 1
     import heapq
     return heapq.nlargest(k, _counter.keys(), key=_counter.get)
+
+def manual(_nums):
+    _counter = {}
+    for i in nums:
+        _counter[i] = _counter.get(i, 0) + 1
+    return sorted(_counter, key=_counter.get, reverse=True)[:k]

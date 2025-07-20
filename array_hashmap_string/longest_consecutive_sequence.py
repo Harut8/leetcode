@@ -8,7 +8,7 @@ def solution(_nums):
     _longest = 0 # longest sequence length found so far
     for _n in _nums:
         # ensure, that n CAN BE start of a sequence
-        if _n - 1 not in _nums:
+        if _n - 1 not in _nums: # THIS IS IMPORTANT BECAUSE IT SAVES TIME (ITERATE OVER SET + WHEN IT'S CAN BE AS START) !!!!
             # that means, that current length is 1
             _length = 1
             # search for next numbers in sequence

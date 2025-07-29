@@ -6,12 +6,20 @@ def remove_duplicates(nums):
     last = 0 # last index of unique elements
     for i in range(1, len(nums)):
         if nums[i] != nums[last]:
-            last += 1
+            last += 1 # now it points to the next unique element
             nums[last] = nums[i]
     print(nums)
     return last + 1
 
-nums = [0,0,1,1,1,2,2,3,3,4]
+def removeDuplicates2(nums: list[int]) -> int:
+    i = 0
+    while i < len(nums):
+        if i + 1 < len(nums) and nums[i + 1] == nums[i]:
+            nums.pop(i)
+        else:
+            i += 1
+
+nums = [0,0,]
 
 remove_duplicates(nums)
 """

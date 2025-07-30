@@ -2,6 +2,7 @@
 
 This folder contains solutions to various LeetCode problems focusing on **Arrays**, **Hash Maps**, and **String** manipulation. Each solution demonstrates different algorithmic approaches and optimization techniques.
 
+See docs here: [array_hashmap_string](https://docs.google.com/document/d/1MbfTXQoU_WzysKnQnKBzhJLuaKjnGqIIdG1FIwYlILg/edit?hl=ru&tab=t.0#heading=h.h1kyz3vjg7uc)
 ## 📋 Complete List of Problems
 
 ### Array Problems

@@ -18,6 +18,23 @@ def checkInclusion(s1, s2):
     return False
 print(checkInclusion("ab", "eidbaooo"))
 
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        w_size = len(s1)
+        l = 0
+        curr = collections.defaultdict(int)
+        count = collections.Counter(s1)
+        for r in range(len(s2)):
+            curr[s2[r]] += 1
+            if r - l + 1 >= w_size:
+                if curr == count:
+                    return True
+                curr[s2[l]] -= 1
+                if curr[s2[l]] == 0: # We can't have negative values
+                    del curr[s2[l]]
+                l += 1
+        return False
+
 """
 UNENQ S1 EV S2
 QANI VOR S1 Y PETQ E LINI S2 I MEJ APA LEN(S1) < LEN(S2)
